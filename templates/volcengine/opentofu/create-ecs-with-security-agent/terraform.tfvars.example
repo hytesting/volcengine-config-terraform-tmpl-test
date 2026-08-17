@@ -1,0 +1,13 @@
+# 复制为 terraform.tfvars 或使用 TF_VAR_* 注入。
+# 凭证不要写入本文件，统一通过 ../../../../.credentials.env 加载 VOLCENGINE_* 环境变量。
+
+instance_id = "i-xxxxxxxxxxxxxxxx"
+
+# 可选：如果已经在云安全中心安装列表中取得 AgentID，可填入。
+# agent_id = "xxxxxxxxxxxxxxxx"
+
+# 可选：从云安全中心“客户端安装引导”复制的部署命令。
+# Linux 和 Windows 命令不同，必须使用控制台为当前账号、地域和操作系统生成的命令。
+# manual_install_command = "bash ... 或 powershell ..."
+
+operator_note = "实例未开启安全 Agent，按云安全中心安装引导手动安装并启用防护。"

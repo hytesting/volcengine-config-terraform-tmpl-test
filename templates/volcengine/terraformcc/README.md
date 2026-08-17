@@ -6,6 +6,7 @@
 - vpc-flow-log-to-tls
 - delete-unassociated-network-acl
 - split-iam-user-group
+- create-ecs-with-security-agent
 
 进入场景目录后加载根目录凭证：
 
