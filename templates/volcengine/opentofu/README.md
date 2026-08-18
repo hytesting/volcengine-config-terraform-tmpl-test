@@ -31,7 +31,8 @@ Terraform 和 OpenTofu 是同一层的两个 IaC 核心引擎。OpenTofu 不是 
 | AccessKey 迁移到 IAM Role | 未提供此实验模板            | 同一资源栈执行两次 Apply：Import + Create，再 Delete       |
 | 删除未关联 Network ACL   | CLI Import，再 Destroy    | Import Plan/Apply，再 Destroy Plan/Apply           |
 | VPC Flow Log 投递 TLS | 一次 Plan/Apply           | 一次 Plan/Apply，无变化                                |
-| 手动安装并启用 ECS 安全 Agent | 控制台或实例内手动安装      | 只读实例并输出手动修复 Runbook                         |
+| 生成 ECS 安全 Agent 启用参数 | 控制台或实例内执行安装命令   | 只读实例并输出安装引导参数、安装命令和检查命令          |
+| 停止 ECS 实例           | CLI Import，再 Plan/Apply | Import、Update 在同一个 Plan/Apply                 |
 
 OpenTofu 1.11.8 的 `import.id` 仍不能直接引用变量，因此需要单元素 `for_each`：
 

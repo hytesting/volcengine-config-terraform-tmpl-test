@@ -7,6 +7,8 @@
 - delete-unassociated-network-acl
 - split-iam-user-group
 - create-ecs-with-security-agent
+- create-eni-attach-instance
+- stop-ecs-instance
 
 进入场景目录后加载根目录凭证：
 
